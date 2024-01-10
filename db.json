@@ -1,0 +1,74 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "judul": "Buku 1",
+            "deskripsi": "deskripsi 1",
+            "harga": 10000,
+            "penulis": "penulis 1"
+        },
+        {
+            "id": 2,
+            "judul": "Buku 2 akuuu",
+            "deskripsi": "deskripsi 2",
+            "harga": 20000,
+            "penulis": "penulis 2"
+        },
+        {
+            "id": 3,
+            "judul": "Buku 3",
+            "deskripsi": "deskripsi 3",
+            "harga": 30000,
+            "penulis": "penulis 3"
+        },
+        {
+            "id": 4,
+            "judul": "Buku 4",
+            "deskripsi": "deskripsi 4",
+            "harga": 40000,
+            "penulis": "penulis 4"
+        },
+        {
+            "id": 5,
+            "judul": "Buku 5",
+            "deskripsi": "deskripsi 5",
+            "harga": 50000,
+            "penulis": "penulis 5"
+        },
+        {
+            "id": 6,
+            "judul": "Buku 6",
+            "deskripsi": "deskripsi 6",
+            "harga": 60000,
+            "penulis": "penulis 6"
+        },
+        {
+            "id": 7,
+            "judul": "Buku 7",
+            "deskripsi": "deskripsi 7",
+            "harga": 70000,
+            "penulis": "penulis 7"
+        },
+        {
+            "id": 8,
+            "judul": "Buku 8",
+            "deskripsi": "deskripsi 8",
+            "harga": 80000,
+            "penulis": "penulis 8"
+        },
+        {
+            "id": 9,
+            "judul": "Buku 9",
+            "deskripsi": "deskripsi 9",
+            "harga": 90000,
+            "penulis": "penulis 9"
+        },
+        {
+            "id": 10,
+            "judul": "Buku 10",
+            "deskripsi": "deskripsi 10",
+            "harga": 100000,
+            "penulis": "penulis 10"
+        }
+    ]
+}
