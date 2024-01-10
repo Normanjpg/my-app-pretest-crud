@@ -1,9 +1,13 @@
 import Image from "next/image";
 import back from "@/assets/icons/chevron-left.svg";
 import Link from "next/link";
+import TableDeleteModal from "@/components/TableDeleteModal";
+import TableUpdate from "@/components/TableUpdate";
 
 async function getProducts() {
-  const res = await fetch("http://localhost:5000/products",{cache: "no-store"});
+  const res = await fetch("http://localhost:5000/products", {
+    cache: "no-store",
+  });
   return res.json();
 }
 
@@ -34,53 +38,40 @@ export default async function ProductList() {
               </tr>
             </thead>
             <tbody>
-              {/* Replace this with your data */}
-              {products.map((products, index) => (
-                <tr key={products.id}>
+              {products.map((product, index) => (
+                <tr key={product.id}>
                   <td className="border-4 text-sm px-2 text-xs py-2">
                     {index + 1}
                   </td>
                   <td className="border-4 text-sm px-2 text-xs py-2">
-                    {products.judul}
+                    {product.judul}
                   </td>
                   <td className="border-4 text-sm px-2 text-xs py-2">
-                    {products.deskripsi}
+                    {product.deskripsi}
                   </td>
                   <td className="border-4 text-sm px-2 text-xs py-2">
-                    {products.harga}
+                    {product.harga}
                   </td>
                   <td className="border-4 text-sm px-2 text-xs py-2">
-                    {products.penulis}
+                    {product.penulis}
                   </td>
                   <td className="border-4 text-sm px-2 text-xs py-2 gap-2">
-                    <div>
-                      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                      {/* <button
+                        className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                        type="button"
+                      >
                         Edit
-                      </button>
-                    </div>
+                      </button> */}
+                    <TableUpdate {...product}/>
+                    <TableDeleteModal {...product} />
                     <div>
-                      <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                      {/* <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                         Delete
-                      </button>
+                      </button> */}
                     </div>
                   </td>
                 </tr>
               ))}
-              {/* <tr>
-          <td className="border-4 text-sm px-2 text-xs py-2">Judul 1</td>
-          <td className="border-4 text-sm px-2 text-xs py-2">Deskripsi 1</td>
-          <td className="border-4 text-sm px-2 text-xs py-2">Harga 1</td>
-          <td className="border-4 text-sm px-2 text-xs py-2">Penulis 1</td>
-          <td className="border-4 text-sm px-2 text-xs py-2">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-              Edit
-            </button>
-            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2">
-              Delete
-            </button>
-          </td>
-        </tr> */}
-              {/* End replace */}
             </tbody>
           </table>
           <Link
